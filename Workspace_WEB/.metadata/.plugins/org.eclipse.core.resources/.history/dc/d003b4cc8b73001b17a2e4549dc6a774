@@ -1,0 +1,78 @@
+<%@page import="com.mvc.dto.MVCBoardDto"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<% response.setContentType("text/html; charset=UTF-8"); %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+
+
+
+</script>
+</head>
+
+<%
+	List<MVCBoardDto> list = (List<MVCBoardDto>)request.getAttribute("list"); //컨트롤러에서 "list"에 담아놨던거 
+	
+%>
+<body>
+
+
+	<form action="mycontroller.jsp?command=muldel" method="post" id="muldelform">
+	<h1>List</h1>
+	<table border="1">
+	<col width="50">
+	<col width="70">
+	<col width="200">
+	<col width="100">
+		<tr>
+			<th><input type="checkbox" name="all" onclick="allchk(this.checked);"></th>
+			<th>번호 </th>
+			<th>작성자</th>
+			<th>제목</th>
+			<th>날짜</th>
+		</tr>
+
+<%
+	for(MVCBoardDto dto : list){
+%>	
+
+	<tr>
+		<td><input type="checkbox" name="chk" value="<%=dto.getSeq()%>"></td>
+		<td><%=dto.getSeq() %> </td>
+		<td><%=dto.getWriter() %></td>
+		<td><a href="mycontroller.jsp?command=select&seq=<%=dto.getSeq()%>"><%=dto.getTitle() %></a></td>
+		<td><%=dto.getRegdate() %></td>
+	</tr>
+	
+<%
+	}
+%>
+	<tr>
+		<td colspan="4" align="right">
+		<input type="submit" value="선택삭제"> 
+		<input type="button" value="글작성" onclick="location.href='mycontroller.jsp?command=insertform'">
+		</td>
+	</tr>
+	
+	
+	
+	</table>
+	</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

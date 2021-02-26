@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>home</h1>
+	<a href="hello.do?command=get">hello</a> <!-- hello.do 라고 연결해서 web.xml에 hello servlet에 요청한다 이건 get 방식이다 -->
+	<br>
+	<form action="controller.do" method="post">
+		<input type="hidden" name="command" value="post">
+		<input type="submit" value="hello">
+	
+	</form>
+	
+	
+</body>
+</html>

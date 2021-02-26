@@ -1,0 +1,87 @@
+package com.mvc.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.jsp.PageContext;
+
+import com.mvc.biz.MVCBoardBiz;
+import com.mvc.biz.MVCBoardBizImpl;
+import com.mvc.dto.MVCBoardDto;
+
+
+
+/**
+ * Servlet implementation class Myservlet
+ */
+@WebServlet("/Myservlet")
+public class Myservlet extends HttpServlet { 
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Myservlet() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html; charset=UTF-8");
+	    
+	    MVCBoardBiz biz = new MVCBoardBizImpl();
+	    
+	    String command = request.getParameter("command");
+	    System.out.println("["+command+"]");
+	    if(command.equals("list")) {
+	    	List<MVCBoardDto> list = biz.selectlist();
+	    	
+	    	request.setAttribute("list", list);
+	    	
+	    	RequestDispatcher dispatch = request.getRequestDispatcher("mylist.jsp");
+	    	dispatch.forward(request, response);
+	    	
+	    	
+	    }else if(command.equals("insertform")) {
+	    	response.sendRedirect("myinsert.jsp"); 
+	    
+	    
+	    }else if(command.equals("insertres")) {
+	    	
+	    }else if(command.equals("select")) {
+	    	
+	    	int seq = Integer.parseInt(request.getParameter("seq"));
+	    	
+	    	MVCBoardDto dto = biz.selectOne(seq);
+	    	
+	    	request.setAttribute("select", dto);
+	    	
+	    	RequestDispatcher dispatch = request.getRequestDispatcher("myselect.jsp");
+	    	dispatch.forward(request, response);
+	    	
+	    	
+	    }else if(command.equals("updateform")) {
+	    	int seq = Integer.parseInt(request.getParameter("seq"));
+	    	request.setAttribute("seq", seq);
+	    	RequestDispatcher dispatch = request.getRequestDispatcher("myupdate.jsp");
+	    	dispatch.forward(request, response);
+	    	
+	    }else if(command.equals("updateres")) {
+	    	//int seq = Integer.parseInt(request.getParameter("seq"));
+	    	
+	    	
+	    }
+	}
+
+}

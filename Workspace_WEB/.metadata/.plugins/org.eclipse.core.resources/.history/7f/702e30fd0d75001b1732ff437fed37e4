@@ -1,0 +1,210 @@
+<%@page import="java.util.List"%>
+<%@page import="com.login.dto.MyMemberDto"%>
+<%@page import="com.login.biz.MyMemberBiz"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<% response.setContentType("text/html; charset=UTF-8"); %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<%
+	String command = request.getParameter("command");
+	System.out.println("["+command+"]");
+	
+	MyMemberBiz biz = new MyMemberBiz();
+	
+	if(command.equals("login")){
+		//1.값 받아올거 있으면 받아오자 
+		String myid= request.getParameter("myid");
+		String mypw= request.getParameter("mypw");
+		//2. 디비에 보내주자 
+		MyMemberDto dto = biz.login(myid, mypw);
+		
+		if(dto != null){
+			
+			//session scope에 객체 담기 
+			session.setAttribute("dto",dto);
+			//만료되는 시간 설정 (default : 30분)
+			session.setMaxInactiveInterval(10*60);
+			
+			if(dto.getMyrole().equals("ADMIN")){
+				response.sendRedirect("adminmain.jsp");
+			}else if(dto.getMyrole().equals("USER")){
+				response.sendRedirect("usermain.jsp");
+			}
+		}else{
+			
+		
+%>
+
+	<script type="text/javascript">
+		alert("로그인 실패");
+		location.href="index.html";
+	</script>			
+			
+			
+<%			
+		}
+		
+	}else if(command.equals("logout")){
+		session.invalidate(); // session.setMaxInactiveInterval(10*60); 내가 위에서 정해준 시간 안에서 그 값 삭제 
+		response.sendRedirect("index.html");
+	
+	
+	}else if(command.equals("listall")){
+		
+		List<MyMemberDto> list = biz.selectAllUser();
+		//1. 
+		
+		//2.
+		
+		//3.
+		request.setAttribute("list", list);
+		
+		//4.
+		pageContext.forward("userlistall.jsp");
+		
+		
+		
+	}else if(command.equals("listenabled")){
+		
+		List<MyMemberDto> list = biz.selectEnabledUser();
+		
+		request.setAttribute("list", list);
+		pageContext.forward("userlisten.jsp");
+		
+	}else if(command.equals("updateroleform")){
+		int myno = Integer.parseInt(request.getParameter("myno"));
+		
+		MyMemberDto dto = biz.selectUser(myno);
+		
+		request.setAttribute("dto", dto);
+		pageContext.forward("updaterole.jsp");
+		
+	}else if(command.equals("updaterole")){
+		int myno = Integer.parseInt(request.getParameter("myno"));
+		String myrole = request.getParameter("myrole");
+		
+		int res = biz.updateRole(myno, myrole);
+		if(res>0){
+	
+%>
+ 		<script type="text/javascript">
+ 		alert("등급변경성공");
+ 		location.href="logincontroller.jsp?command=listenabled";
+ 		</script>
+<%
+		}else{
+%>
+		<script type="text/javascript">
+		 		alert("변경실패");
+		 		location.href="logincontroller.jsp?command=updateroleform&myno=<%=myno%>";
+		</script>
+
+<%
+		}
+	}else if (command.equals("registform")){
+        response.sendRedirect("regist.jsp");
+        
+	}else if(command.equals("idchk")){
+		String myid = request.getParameter("myid");
+		MyMemberDto dto = biz.idCheck(myid);
+		boolean idnotused = true;
+		
+		if(dto.getMyid() != null){
+			idnotused = false; 
+			
+			
+		}
+		response.sendRedirect("idchk.jsp?idnotused="+idnotused);
+	}else if(command.equals("insertuser")){
+		//MYID,MYPW,MYNAME,MYADDR,MYPHONE,MYEMAIL
+		String myid = request.getParameter("myid");
+		String mypw = request.getParameter("mypw");
+		String myname = request.getParameter("myname");
+		String myaddr = request.getParameter("myaddr");
+		String myphone = request.getParameter("myphone");
+		String myemail = request.getParameter("myemail");
+		
+		MyMemberDto dto = new MyMemberDto();
+		dto.setMyid(myid);
+		dto.setMypw(mypw);
+		dto.setMyname(myname);
+		dto.setMyaddr(myaddr);
+		dto.setMyphone(myphone);
+		dto.setMyemail(myemail);
+		
+		int res = biz.insertUser(dto);
+		
+		if(res>0){
+		
+%>
+	<script type="text/javascript">
+	alert("회원가입완료");
+	location.href="index.html";
+	
+	</script>
+
+<%		
+		}else{	
+
+%>
+	<script type="text/javascript">
+	alert("");
+	location.href="";
+	
+	</script>
+
+<%		
+			
+		}		
+	}
+	
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h1 style="color: red;">잘못 왔따....</h1>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+2월 09, 2021 21:30:09.732 NEW SESSION
+2월 09, 2021 21:30:09.732 [30936:25692:0209/213009.730:ERROR:device_event_log_impl.cc(211)] [21:30:09.731] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 11, 2021 11:38:08.845 NEW SESSION
+2월 11, 2021 11:38:08.845 [27300:21432:0211/113808.843:ERROR:device_event_log_impl.cc(211)] [11:38:08.843] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 11, 2021 12:02:34.75 [27300:21432:0211/120234.074:ERROR:device_event_log_impl.cc(211)] [12:02:34.073] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+2월 11, 2021 12:02:34.86 [27300:21432:0211/120234.085:ERROR:device_event_log_impl.cc(211)] [12:02:34.085] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+2월 11, 2021 22:19:00.247 NEW SESSION
+2월 11, 2021 22:19:00.248 [19932:18296:0211/221900.244:ERROR:device_event_log_impl.cc(211)] [22:19:00.244] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 12, 2021 21:03:08.402 NEW SESSION
+2월 12, 2021 21:03:08.402 [5208:5232:0212/210308.400:ERROR:device_event_log_impl.cc(211)] [21:03:08.400] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 12, 2021 22:28:24.447 [11896:16228:0212/222824.445:ERROR:device_event_log_impl.cc(211)] [22:28:24.445] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 17, 2021 09:02:05.672 NEW SESSION
+2월 17, 2021 09:02:05.672 [2708:14168:0217/090205.668:ERROR:device_event_log_impl.cc(211)] [09:02:05.667] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 17, 2021 09:15:01.627 [19404:12788:0217/091501.626:ERROR:device_event_log_impl.cc(211)] [09:15:01.627] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 18, 2021 10:39:00.200 NEW SESSION
+2월 18, 2021 10:39:00.200 [21044:11580:0218/103900.198:ERROR:device_event_log_impl.cc(211)] [10:39:00.198] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 18, 2021 12:47:09.782 [14148:19104:0218/124709.781:ERROR:device_event_log_impl.cc(211)] [12:47:09.781] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 18, 2021 12:53:19.514 NEW SESSION
+2월 18, 2021 12:53:19.514 [9696:18604:0218/125319.513:ERROR:device_event_log_impl.cc(211)] [12:53:19.512] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 18, 2021 13:38:35.612 [9696:19736:0218/133835.609:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.615 [9696:19736:0218/133835.609:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.616 [9696:19736:0218/133835.609:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.616 [9696:19736:0218/133835.609:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.616 [9696:19736:0218/133835.610:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.616 [9696:19736:0218/133835.610:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.616 [9696:19736:0218/133835.610:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.617 [9696:19736:0218/133835.610:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+2월 18, 2021 13:38:35.617 [9696:19736:0218/133835.610:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+
+2월 18, 2021 17:09:34.189 NEW SESSION
+2월 18, 2021 17:09:34.189 [21364:9572:0218/170934.188:ERROR:device_event_log_impl.cc(211)] [17:09:34.188] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 19, 2021 09:11:31.537 NEW SESSION
+2월 19, 2021 09:11:31.537 [6160:6428:0219/091131.533:ERROR:device_event_log_impl.cc(211)] [09:11:31.533] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 20, 2021 23:51:30.665 NEW SESSION
+2월 20, 2021 23:51:30.665 [16196:16504:0220/235130.662:ERROR:device_event_log_impl.cc(211)] [23:51:30.662] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 22, 2021 09:12:10.483 NEW SESSION
+2월 22, 2021 09:12:10.483 [15152:18744:0222/091210.475:ERROR:device_event_log_impl.cc(211)] [09:12:10.475] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 22, 2021 13:51:54.258 NEW SESSION
+2월 22, 2021 13:51:54.258 [4384:1588:0222/135154.256:ERROR:device_event_log_impl.cc(211)] [13:51:54.255] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 22, 2021 14:46:13.83 [4384:1588:0222/144613.082:ERROR:device_event_log_impl.cc(211)] [14:46:13.083] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+
+2월 22, 2021 21:34:34.978 NEW SESSION
+2월 22, 2021 21:34:34.978 [12628:18548:0222/213434.976:ERROR:device_event_log_impl.cc(211)] [21:34:34.975] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 23, 2021 24:30:03.973 [22492:19804:0223/003003.973:ERROR:device_event_log_impl.cc(211)] [00:30:03.972] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 24, 2021 09:41:52.451 NEW SESSION
+2월 24, 2021 09:41:52.452 [13252:13256:0224/094152.448:ERROR:device_event_log_impl.cc(211)] [09:41:52.448] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:17:44.629 [9620:13464:0224/101744.629:ERROR:device_event_log_impl.cc(211)] [10:17:44.628] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:18:24.696 [13360:13228:0224/101824.696:ERROR:device_event_log_impl.cc(211)] [10:18:24.696] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:21:44.542 [17028:17132:0224/102144.541:ERROR:device_event_log_impl.cc(211)] [10:21:44.541] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:37:11.155 [4360:6132:0224/103711.155:ERROR:device_event_log_impl.cc(211)] [10:37:11.155] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:54:16.159 [12224:12012:0224/105416.159:ERROR:device_event_log_impl.cc(211)] [10:54:16.159] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:56:16.780 [12656:17256:0224/105616.780:ERROR:device_event_log_impl.cc(211)] [10:56:16.780] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:56:55.905 [17364:9572:0224/105655.905:ERROR:device_event_log_impl.cc(211)] [10:56:55.905] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 10:58:11.481 [14472:14568:0224/105811.481:ERROR:device_event_log_impl.cc(211)] [10:58:11.482] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 24, 2021 11:25:31.527 [9404:7312:0224/112531.527:ERROR:device_event_log_impl.cc(211)] [11:25:31.526] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 25, 2021 24:25:04.370 NEW SESSION
+2월 25, 2021 24:25:04.370 [14132:11772:0225/002504.365:ERROR:device_event_log_impl.cc(211)] [00:25:04.365] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 25, 2021 24:29:55.514 [19944:3488:0225/002955.514:ERROR:device_event_log_impl.cc(211)] [00:29:55.514] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 26, 2021 24:09:59.460 NEW SESSION
+2월 26, 2021 24:09:59.460 [5608:12760:0226/000959.458:ERROR:device_event_log_impl.cc(211)] [00:09:59.459] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 26, 2021 24:17:55.459 [7136:15320:0226/001755.459:ERROR:device_event_log_impl.cc(211)] [00:17:55.459] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 26, 2021 24:20:13.419 [4176:7804:0226/002013.418:ERROR:device_event_log_impl.cc(211)] [00:20:13.419] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 26, 2021 24:29:56.374 [15932:12300:0226/002956.373:ERROR:device_event_log_impl.cc(211)] [00:29:56.374] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 26, 2021 01:20:29.906 [20528:7184:0226/012029.906:ERROR:device_event_log_impl.cc(211)] [01:20:29.905] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 26, 2021 01:27:19.453 [5440:15064:0226/012719.452:ERROR:device_event_log_impl.cc(211)] [01:27:19.453] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
