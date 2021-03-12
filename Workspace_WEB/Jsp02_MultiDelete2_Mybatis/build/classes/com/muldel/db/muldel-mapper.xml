@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.muldel.mapper">
+  
+	<select id="selectList" resultType="MDBoardDto">
+		SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE
+		FROM MDBOARD
+		ORDER BY SEQ DESC
+	</select>
+  	
+<!-- resulttype은 select일때만 쓰고 나머지 insertdeleteupdate는 안쓴다 자동int  --> 
+  <!-- foreach안의 collection: 값의 모임 보내준 값의 이름..?  -->	 	
+  	<delete id="multiDelete" parameterType="map" >
+  		DELETE FROM MDBOARD
+  		WHERE SEQ IN
+  	<foreach collection="seqs" item="seq" open ="(" separator="," close=")">
+  			#{seq}
+  		
+  		</foreach> 
+	
+  	
+  	</delete>
+  
+  
+  
+</mapper>
